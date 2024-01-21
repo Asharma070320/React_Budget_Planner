@@ -12,9 +12,9 @@ const Aside = () => {
      <div className="center">
     {
         userCtx.data.map((lists,index)=> {
-            return <div>
-                <h1>{lists}</h1>
-                <h1>{userCtx.amount[index]}</h1>
+            return <div className='update'>
+                <h1>Name : - {lists}</h1>
+                <h1>Costs : - {userCtx.amount[index]}</h1>
             </div>
         })
     }

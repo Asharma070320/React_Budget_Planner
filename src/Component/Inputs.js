@@ -7,7 +7,7 @@ import Aside from './Aside'
 const Inputs = () => {
 
     const userCtx = useContext(UserContext);
-    console.log(userCtx);
+    // console.log(userCtx);
 
     let[text,setText] = useState("");
     const getTextValue = (e) => {
@@ -37,7 +37,12 @@ const Inputs = () => {
         <input type="number" onChange={getNumValue} />
       </div>
     </div>
-    <button onClick={clickBtn}>Save</button>
+    {/* <button onClick={clickBtn}>Save</button> */}
+             <button type="button" className="button" onClick={clickBtn}>
+                    <div className="button-top">Save</div>
+                    <div className="button-bottom"></div>
+                    <div className="button-base"></div>
+                </button>
     <Aside />
     </>
   )

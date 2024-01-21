@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div className='Home_Container'>
-      <h1>My Budget Planner</h1>
+      <h1 style={{textDecoration: 'underline'}}>My Budget Planner</h1>
       <div className='budgets'>
         <p className='bud'>Budget: Rs.2000</p>
         <p className='remain'>Remaining: Rs.2000</p>
