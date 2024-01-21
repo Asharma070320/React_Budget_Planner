@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import { UserContext } from './ContextDemo/ContextDemo'
+import Home from './Component/Home'
 
-function App() {
+const App = () => {
+
+  let[data,setData]= useState([]);
+  let[amount,setAmount] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserContext.Provider value={{data:data,setData:setData, amount:amount, setAmount:setAmount}}>
+        <Home />
+      </UserContext.Provider>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
